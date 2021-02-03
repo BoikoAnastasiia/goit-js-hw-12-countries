@@ -2,7 +2,6 @@ html {
   box-sizing: border-box;
 }
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap');
 *,
 *::before,
 *::after {
@@ -18,13 +17,29 @@ body {
 
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 55px;
+  padding-right: 55px;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   background-position: right 50% top -50%;
 }
 
+li,
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+
 h1 {
+  text-align: center;
+
   text-transform: uppercase;
   font-size: 36px;
   margin-top: 40px;
@@ -34,6 +49,8 @@ h1 {
 }
 
 .search-form {
+  text-align: center;
+
   max-width: 300px;
   margin: 10px auto;
   padding: 10px 20px;
@@ -46,10 +63,12 @@ h1 {
 }
 
 .form-control {
-  font-family: 'Source Serif Pro', serif;
+  text-align: center;
+
+  font-family: 'Yusei Magic', sans-serif;
   background: rgba(134, 25, 25, 0.1);
   border: none;
-  font-size: 26px;
+  font-size: 25px;
   letter-spacing: 0.1em;
   font-weight: bold;
   height: auto;
@@ -62,4 +81,31 @@ h1 {
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   margin-bottom: 30px;
   border-radius: 4px;
+}
+
+.bold-description {
+  display: inline;
+}
+.flag {
+  padding-right: 30px;
+}
+
+.countries-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.country-name {
+  font-size: 35px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+.country-description-container {
+  margin-top: -15px;
+}
+
+.lang {
+  margin-left: 9px;
+  list-style: url('/media/examples/rocket.svg');
 }
