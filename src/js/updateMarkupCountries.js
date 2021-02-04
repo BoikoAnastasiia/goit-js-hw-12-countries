@@ -1,10 +1,10 @@
-import countryTpl from '../templates/country.hbs';
+import countriesTpl from '../templates/countries.hbs';
 
 const article = document.querySelector('.countries-container');
 
-function renderMurkupCountry(country) {
-  const markup = countryTpl(country);
+function renderMurkupCountries(country) {
+  const markup = countriesTpl(country);
   article.insertAdjacentHTML('beforeend', markup);
 }
 
-export default renderMurkupCountry;
+export default renderMurkupCountries;
