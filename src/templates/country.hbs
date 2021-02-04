@@ -17,14 +17,17 @@
             <ul>
                 <li class="bold-description"></li>
                 Languages:
-
-                <li class="lang">{{languages.name}}</li>
+                {{#each languages}}
+                <li class="lang">{{name}}</li>
+                {{/each}}
             </ul>
         </li>
         <li>
             <p class="bold-description">Currencies:</p>
-            <span class="description">{{currencies.name}}</span>
-            <span class="description">{{currencies.symbol}}</span>
+            {{#each currencies}}
+            <span class="description">{{name}}</span>
+            <span class="description">{{symbol}}</span>
+            {{/each}}
         </li>
     </ul>
 </div>

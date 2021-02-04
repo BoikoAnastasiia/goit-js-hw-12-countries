@@ -3,7 +3,7 @@ function fetchCountries(country) {
 
   return fetch(url)
     .then(res => res.json())
-    .then(data => data.countries)
-    .catch(error => console.log(error));
+    .then({ data })
+    .catch(console.log);
 }
 export default fetchCountries;
