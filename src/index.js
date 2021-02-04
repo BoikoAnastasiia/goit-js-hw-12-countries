@@ -6,10 +6,10 @@ import renderMurkupCountries from './js/updateMarkupCountries';
 const input = document.querySelector('.form-control');
 
 input.addEventListener('input', event => {
-  const inputedCountry = event.target.value;
+  const inputCountry = event.target.value;
 
-  //   renderMurkupCountry(fetchCountries(inputedCountry));
-  console.log(fetchCountries(inputedCountry));
+  renderMurkupCountry(fetchCountries(inputCountry));
+  console.log(fetchCountries(inputCountry));
 });
 
 // renderMurkupCountry(fetchCountries('canada'));
