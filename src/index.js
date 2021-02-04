@@ -2,15 +2,12 @@ import './styles.css';
 import fetchCountries from './js/fetchCountries';
 import renderMurkupCountry from './js/updateMarkupCountry';
 import renderMurkupCountries from './js/updateMarkupCountries';
+import refs from './js/refs';
 
-const input = document.querySelector('.form-control');
-
-input.addEventListener('input', event => {
+refs.input.addEventListener('input', event => {
   const inputCountry = event.target.value;
+  refs.article.innerHtml = '';
+  inputCountry.reset();
 
-  renderMurkupCountry(fetchCountries(inputCountry));
-  console.log(fetchCountries(inputCountry));
+  fetchCountries(inputCountry).then(renderMurkupCountry).catch(console.log);
 });
-
-// renderMurkupCountry(fetchCountries('canada'));
-// console.log(fetchCountries.country);
