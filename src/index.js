@@ -7,7 +7,6 @@ import refs from './js/refs';
 refs.input.addEventListener('input', event => {
   const inputCountry = event.target.value;
   refs.article.innerHtml = '';
-  inputCountry.reset();
 
   fetchCountries(inputCountry).then(renderMurkupCountry).catch(console.log);
 });
