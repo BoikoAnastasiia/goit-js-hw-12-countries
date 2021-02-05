@@ -3,6 +3,7 @@ import fetchCountries from './js/fetchCountries';
 import renderMarkupCountry from './js/updateMarkupCountry';
 import renderMarkupCountries from './js/updateMarkupCountries';
 import refs from './js/refs';
+var debounce = require('lodash.debounce');
 
 refs.input.addEventListener('input', event => {
   const inputCountry = event.target.value;
@@ -10,4 +11,5 @@ refs.input.addEventListener('input', event => {
     .catch(console.log)
     .then(renderMarkupCountry)
     .catch(console.log);
+  console.log(fetchCountries(inputCountry).lenght);
 });
