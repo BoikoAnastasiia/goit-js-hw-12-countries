@@ -11,7 +11,12 @@ refs.input.addEventListener(
     const inputCountry = event.target.value;
     fetchCountries(inputCountry)
       .catch(console.log)
-      .then(renderMarkupCountry)
+      .then(data => {
+        if (data.lenght > 1) {
+          renderMarkupCountries;
+        }
+        renderMarkupCountry;
+      })
       .catch(console.log);
   }, 500),
 );
