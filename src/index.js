@@ -5,11 +5,16 @@ import renderMarkupCountries from './js/updateMarkupCountries';
 import refs from './js/refs';
 var debounce = require('lodash.debounce');
 
-refs.input.addEventListener('input', event => {
-  const inputCountry = event.target.value;
-  fetchCountries(inputCountry)
-    .catch(console.log)
-    .then(renderMarkupCountry)
-    .catch(console.log);
-  console.log(fetchCountries(inputCountry).lenght);
-});
+refs.input.addEventListener(
+  'input',
+  _.throttle(() => {
+    event => {
+      const inputCountry = event.target.value;
+      fetchCountries(inputCountry)
+        .catch(console.log)
+        .then(renderMarkupCountry)
+        .catch(console.log);
+    };
+  }),
+  300,
+);
