@@ -7,14 +7,11 @@ var debounce = require('lodash.debounce');
 
 refs.input.addEventListener(
   'input',
-  _.throttle(() => {
-    event => {
-      const inputCountry = event.target.value;
-      fetchCountries(inputCountry)
-        .catch(console.log)
-        .then(renderMarkupCountry)
-        .catch(console.log);
-    };
-  }),
-  300,
+  debounce(event => {
+    const inputCountry = event.target.value;
+    fetchCountries(inputCountry)
+      .catch(console.log)
+      .then(renderMarkupCountry)
+      .catch(console.log);
+  }, 500),
 );
