@@ -9,13 +9,14 @@ refs.input.addEventListener(
   'input',
   debounce(event => {
     const inputCountry = event.target.value;
+    refs.article.innerHTML = '';
     fetchCountries(inputCountry)
       .catch(console.log)
       .then(data => {
         if (data.lenght > 1) {
-          renderMarkupCountries;
+          renderMarkupCountry(data);
         }
-        renderMarkupCountry;
+        renderMarkupCountries(data);
       })
       .catch(console.log);
   }, 500),

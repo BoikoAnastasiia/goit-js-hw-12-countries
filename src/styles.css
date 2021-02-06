@@ -126,3 +126,7 @@ h1 {
 .single-country-description {
   font-size: 20px;
 }
+
+.countries-list {
+  display: inline;
+}
