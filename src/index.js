@@ -20,7 +20,7 @@ refs.input.addEventListener(
         } else if (data.length > 1) {
           renderMarkupCountries(data);
           error({
-            text: 'Try more specific searching',
+            text: 'Try more specific keywords',
           });
         }
       })
