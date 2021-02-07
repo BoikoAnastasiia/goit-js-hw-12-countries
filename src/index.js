@@ -10,10 +10,11 @@ refs.input.addEventListener(
   debounce(event => {
     const inputCountry = event.target.value;
     refs.article.innerHTML = '';
+
     fetchCountries(inputCountry)
       .catch(console.log)
       .then(data => {
-        if (data.lenght > 1) {
+        if (data.lenght <= 1) {
           renderMarkupCountry(data);
         }
         renderMarkupCountries(data);
