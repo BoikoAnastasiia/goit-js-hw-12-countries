@@ -14,10 +14,11 @@ refs.input.addEventListener(
     fetchCountries(inputCountry)
       .catch(console.log)
       .then(data => {
-        if (data.lenght <= 1) {
+        if (data.length === 1) {
           renderMarkupCountry(data);
+        } else if (data.length > 1) {
+          renderMarkupCountries(data);
         }
-        renderMarkupCountries(data);
       })
       .catch(console.log);
   }, 500),
