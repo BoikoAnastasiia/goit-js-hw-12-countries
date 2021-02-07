@@ -1,7 +1,6 @@
-{{#each this}}
 <div class="countries-container">
     <ul class="single-country-description">
-        {{#each li}}
+        {{#each this}}
         <li>
             <span class="logo"><img src={{flag}} alt="{{name}} flag" width="30px"></span>
             <span>{{name}}</span>
@@ -9,4 +8,3 @@
         {{/each}}
     </ul>
 </div>
-{{/each}}
