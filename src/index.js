@@ -3,6 +3,7 @@ import fetchCountries from './js/fetchCountries';
 import renderMarkupCountry from './js/updateMarkupCountry';
 import renderMarkupCountries from './js/updateMarkupCountries';
 import refs from './js/refs';
+import error from './js/notification';
 var debounce = require('lodash.debounce');
 
 refs.input.addEventListener(
@@ -18,6 +19,9 @@ refs.input.addEventListener(
           renderMarkupCountry(data);
         } else if (data.length > 1) {
           renderMarkupCountries(data);
+          error({
+            text: 'Try more specific searching',
+          });
         }
       })
       .catch(console.log);
