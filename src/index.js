@@ -13,7 +13,6 @@ refs.input.addEventListener(
     refs.article.innerHTML = '';
 
     fetchCountries(inputCountry)
-      .catch(console.log)
       .then(data => {
         if (data.length === 1) {
           renderMarkupCountry(data);
