@@ -24,6 +24,10 @@ refs.input.addEventListener(
           });
         }
       })
-      .catch(console.log);
+      .catch(
+        error({
+          text: 'Sorry, something went wrong',
+        }),
+      );
   }, 500),
 );
