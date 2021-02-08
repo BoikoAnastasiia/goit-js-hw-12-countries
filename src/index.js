@@ -20,13 +20,10 @@ refs.input.addEventListener(
           renderMarkupCountries(data);
           error({
             text: 'Try more specific keywords',
+            delay: 1000,
           });
         }
       })
-      .catch(
-        error({
-          text: 'Sorry, something went wrong',
-        }),
-      );
+      .catch(console.log);
   }, 500),
 );
