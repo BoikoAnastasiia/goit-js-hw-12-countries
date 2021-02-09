@@ -5,13 +5,13 @@ function fetchCountries(country) {
 
   return fetch(url)
     .then(res => res.json())
+
+    .then({ name })
     .catch(
       error({
         text: 'Something went wrong',
         delay: 1000,
       }),
-    )
-    .then({ name })
-    .catch(console.log);
+    );
 }
 export default fetchCountries;

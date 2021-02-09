@@ -25,5 +25,5 @@ refs.input.addEventListener(
         }
       })
       .catch(console.log);
-  }, 500),
+  }, 1000),
 );
